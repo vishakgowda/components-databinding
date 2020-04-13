@@ -1,0 +1,7 @@
+<div class="row">
+    <div class="col-10 bg-light p-2 mb-3">
+        <h6>{{element.name}}</h6>
+        <strong *ngIf="element.type === 'server'">{{element.content}}</strong>
+        <em *ngIf="element.type === 'bluprint'">{{element.content}}</em>
+    </div>
+</div>

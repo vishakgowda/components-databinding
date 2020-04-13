@@ -1,0 +1,53 @@
+<div class="container">
+  <h4 class="pb-5 text-primary text-center">Data Passing between the components using custom property & event binding</h4>
+  <div class="col-10">
+    <h3>Used Concepts</h3>
+    <p>@input & @output Decoratives to pass Data b/w chlild and parent component</p>
+    <p>Custom Event & property binding</p>
+    <p>Angular inbuilt Databinding methods</p>
+    <p>Local variable reference</p>
+    <p>@viewchild Decorative</p>
+  </div>
+  <div class="row ">
+    <div class="col-12">
+
+      <div class="col-12">
+        <hr>
+        <app-server (serverCreated)="onaddServeradded($event)" (bluprintCreatd)="onaddBlueprintadded($event)">
+        </app-server>
+      </div>
+      <div class="col-12">
+        <app-server-elements *ngFor="let item of serverElements" [myElement]="item">
+        </app-server-elements>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!--
+     --View Encapsulation --
+
+    When we write styles inside a component stylesheet, it is applied only to that component, It is not a default behaiviour of browsers. It is a forced behaiviour of angular called view encapsulation.
+    We can override this viewEncapsulation
+    Eg:
+
+  @Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  encapsulation:ViewEncapsulation.Emulated
+    Default value is Emulated, None overrides all the values
+})
+
+ -->
+
+
+ <!--
+         -----Other Theory concepts covered -----
+          - View Encapsulation
+          - ngContent
+          - Understanding LifecycleHooks
+
+  -->
